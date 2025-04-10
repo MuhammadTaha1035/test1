@@ -1,0 +1,21 @@
+  function emailvalFunction() {
+    let inputs = document.querySelectorAll("#checkout-customer input");
+    let isvalid=true;
+    
+    inputs.forEach (input => {
+      if(input.value.trim() == ""){
+        input.style.border = "2px solid red";
+        input.value = input.placeholder + "can't be empty";
+        input.style.color = red;
+        isvalid = false;
+      }
+      else{
+        input.style.border = "2px solid green";
+        input.style.color = "black"
+      }
+
+    });
+    return isvalid;
+
+    
+  }

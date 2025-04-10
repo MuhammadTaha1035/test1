@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zar-Bahar Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <p>FREE NEXT DAY DELIVERY TO 600+ STORES. T&Cs APPLY.</p>
+        </div>
+
+        <!-- Middle Section -->
+        <div class="middle-section">
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <img src="icons/search.png" alt="Search" class="search-icon">
+            </div>
+            <div class="logo">
+                <h1>ZAR-BAHAR</h1>
+            </div>
+            <div class="user-actions">
+                <img src="icons/location.png" alt="Location" class="user-icon">
+                <img src="icons/favorites.png" alt="Favorites" class="user-icon">
+                <img src="icons/account.png" alt="Account" class="user-icon">
+                <img src="icons/cart.png" alt="Cart" class="user-icon">
+                <img src="icons/country.png" alt="Country" class="user-icon">
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#">New Season</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Accessories & Gifts</a></li>
+                <li><a href="#">Footwear</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Inspiration</a></li>
+                <li><a href="#" class="outlet">Outlet</a></li>
+            </ul>
+        </nav>
+        <div class="promo-bar">
+            <p class="discount">20% OFF FOR STUDENTS AND GRADUATES*</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content-section">
+        <h2>Explore Assignments and Tasks</h2>
+        <div class="task-list">
+            <div class="task-item">
+                <span>Assignment 1</span>
+                <button class="view-btn" data-src="assignment1/">View</button>
+            </div>
+            <div class="task-item">
+                <span>Assignment 2</span>
+                <button class="view-btn" data-src="assignment2/">View</button>
+            </div>
+            <div class="task-item">
+                <span>Task 1</span>
+                <button class="view-btn" data-src="task1/">View</button>
+            </div>
+            <div class="task-item">
+                <span>Task 2</span>
+                <button class="view-btn" data-src="task2/">View</button>
+            </div>
+        </div>
+        <iframe id="task-iframe" src="" frameborder="0"></iframe>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Order Tracking</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul class="social-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">TikTok</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="contact-info">Contact us: info@zar-bahar.com | +123 456 7890</p>
+            <p class="copyright">© 2025 Zar-Bahar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Iframe Loading -->
+    <script>
+        // Get all view buttons
+        const viewButtons = document.querySelectorAll('.view-btn');
+        const iframe = document.getElementById('task-iframe');
+
+        // Add click event listener to each button
+        viewButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Get the src from the button's data-src attribute
+                const src = button.getAttribute('data-src');
+                // Update the iframe's src attribute
+                iframe.src = src;
+            });
+        });
+    </script>
+</body>
+</html>
